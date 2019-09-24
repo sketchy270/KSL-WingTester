@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="scriptMain.js"></script>
+
+    <title>KSL Wing Tester V2</title>
+    <!-- Created by Trevor Heim, 2019 -->
+  </head>
+  <body>
+    <div id="mainMenu">
+      <ul>
+        <li>Left Wing: <input type='file' id='leftWing' /></li>
+        <li>Right Wing: <input type='file' id='rightWing' /></li>
+        <li>970x250: <input type='file' id='titan-ad' /></li>
+        <li><input type="checkbox" id="toggleWindow">Toggle Overlay</li>
+        <li><button onClick="window.location.reload()">Reset</button></li>
+        <li><button onClick="document.getElementById('screenshot').scrollIntoView();">Align Page</button>
+      </ul>
+    </div>
+
+    <div id="screenshot">
+      <div id="top-bar"><img src="ksl-top.png"></div>
+
+      <div id="content">
+        <!-- Left wing content -->
+        <div class="column" id="leftSide"><div id="leftWindow" class="overlay">110px x 435px</div></div>
+        <!-- Middle content -->
+        <div class="column" id="middle">
+          <img src="ksl-body-top.png">
+          <div id="titan-container">
+            <div class="small-col" id="blank-left"></div>
+            <div class="small-col" id="titan"></div>
+            <div class="small-col" id="blank-right"></div>
+          </div>
+          <img src="ksl-body-bottom.png">
+        </div>
+        <!-- Right wing content -->
+        <div class="column" id="rightSide"><div id="rightWindow" class="overlay">110px x 435px</div></div>
+      </div>
+    </div>
+  </body>
+</html>
